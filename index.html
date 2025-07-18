@@ -3,21 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TITLE</title>
+    <title>Portfólio - Rafael Silva</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #24292e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px #ccc;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .artigo {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .artigo:last-child {
+            border-bottom: none;
+        }
+    </style>
 </head>
 <body>
-   <main>
     <header>
-        <h1>Cursos Grátis</h1>
+        <h1>Rafael Silva - Portfólio</h1>
     </header>
-    <article>
-        <h2>Arigo 001</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et explicabo corrupti pariatur, cum unde aut laudantium? Sequi qui quas iure dolore sapiente! Aliquid commodi quam voluptatibus eligendi temporibus, dolor corporis!</p>
-    </article>
-    <article>
-        <h2>Artigo 002</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente nisi similique, necessitatibus itaque obcaecati perspiciatis exercitationem libero blanditiis recusandae dolores laboriosam odio quam, quae rerum velit eum. Dolor, cum veniam.</p>
-    </article>
-   </main>
+
+    <main>
+        <section>
+            <h2>Sobre mim</h2>
+            <p>Sou graduado em Análise e Desenvolvimento de Sistemas e estou em busca do meu primeiro estágio na área de tecnologia. Este portfólio apresenta alguns dos meus projetos iniciais.</p>
+        </section>
+
+        <section>
+            <h2>Projetos / Artigos</h2>
+            <div id="artigos">
+                <p>Carregando artigos...</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Consumindo a API de artigos
+        fetch('/api/artigos')
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById('artigos');
+                container.innerHTML = '';
+
+                data.forEach(artigo => {
+                    const div = document.createElement('div');
+                    div.className = 'artigo';
+                    div.innerHTML = `<h3>${artigo.titulo}</h3><p>${artigo.conteudo}</p>`;
+                    container.appendChild(div);
+                });
+            })
+            .catch(err => {
+                document.getElementById('artigos').innerHTML = '<p>Erro ao carregar os artigos.</p>';
+            });
+    </script>
 </body>
 </html>
