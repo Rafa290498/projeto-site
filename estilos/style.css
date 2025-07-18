@@ -1,0 +1,18 @@
+`{
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+body {
+    
+    background-color: #6890a8;
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 3px 3px 10px rgba(40, 52, 161, 0.1);
+}
