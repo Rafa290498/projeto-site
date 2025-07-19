@@ -11,7 +11,11 @@ document.querySelectorAll('nav a').forEach(link => {
 });
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 // Modo escuro/claro
+=======
+// Botão modo escuro/claro
+>>>>>>> Stashed changes
 =======
 // Botão modo escuro/claro
 >>>>>>> Stashed changes
@@ -33,6 +37,7 @@ let darkMode = true;
 toggleButton.addEventListener('click', () => {
     darkMode = !darkMode;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     document.body.style.background = darkMode 
         ? 'linear-gradient(to right, #0f2027, #203a43, #2c5364)' 
         : '#f4f4f4';
@@ -41,6 +46,11 @@ toggleButton.addEventListener('click', () => {
     document.body.style.background = ''; // Mantém o fundo animado funcionando sempre
 >>>>>>> Stashed changes
 
+=======
+
+    document.body.style.background = ''; // Mantém o fundo animado funcionando sempre
+
+>>>>>>> Stashed changes
     document.body.style.color = darkMode ? '#fff' : '#222';
 
     document.querySelectorAll('.card').forEach(card => {
@@ -118,4 +128,7 @@ titulo.addEventListener('mouseenter', () => {
 titulo.addEventListener('mouseleave', () => {
     titulo.style.textShadow = 'none';
 });
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
