@@ -1,4 +1,3 @@
-// Scroll suave no menu
 document.querySelectorAll('nav a').forEach(link => {
     link.addEventListener('click', e => {
         e.preventDefault();
@@ -10,15 +9,6 @@ document.querySelectorAll('nav a').forEach(link => {
     });
 });
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-// Modo escuro/claro
-=======
-// Botão modo escuro/claro
->>>>>>> Stashed changes
-=======
-// Botão modo escuro/claro
->>>>>>> Stashed changes
 const toggleButton = document.createElement('button');
 toggleButton.innerText = '🌙 Modo Noturno';
 toggleButton.style.float = 'right';
@@ -34,23 +24,12 @@ toggleButton.style.transition = '0.3s';
 document.querySelector('header .container').appendChild(toggleButton);
 
 let darkMode = true;
+
 toggleButton.addEventListener('click', () => {
     darkMode = !darkMode;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    document.body.style.background = darkMode 
-        ? 'linear-gradient(to right, #0f2027, #203a43, #2c5364)' 
-        : '#f4f4f4';
-=======
 
-    document.body.style.background = ''; // Mantém o fundo animado funcionando sempre
->>>>>>> Stashed changes
+    document.body.style.background = '';
 
-=======
-
-    document.body.style.background = ''; // Mantém o fundo animado funcionando sempre
-
->>>>>>> Stashed changes
     document.body.style.color = darkMode ? '#fff' : '#222';
 
     document.querySelectorAll('.card').forEach(card => {
@@ -67,13 +46,9 @@ toggleButton.addEventListener('click', () => {
     toggleButton.innerText = darkMode ? '🌙 Modo Noturno' : '☀️ Modo Claro';
 });
 
-// Atualiza o rodapé com o ano atual
 const year = new Date().getFullYear();
 document.querySelector('footer').innerHTML += `<p style="margin-top:10px;">Atualizado em ${year}</p>`;
-<<<<<<< Updated upstream
-=======
 
-// Gradiente animado de fundo moderno
 let colors = [
     [15,32,39],
     [32,58,67],
@@ -109,7 +84,6 @@ function updateGradient() {
         step %= 1;
         colorIndices[0] = colorIndices[1];
         colorIndices[2] = colorIndices[3];
-
         colorIndices[1] = (colorIndices[1] + Math.floor(1 + Math.random() * (colors.length - 1))) % colors.length;
         colorIndices[3] = (colorIndices[3] + Math.floor(1 + Math.random() * (colors.length - 1))) % colors.length;
     }
@@ -117,10 +91,7 @@ function updateGradient() {
 
 setInterval(updateGradient, 10);
 
-// Efeito interativo no título
 const titulo = document.querySelector('header h1');
-titulo.style.fontFamily = "'Orbitron', sans-serif";
-
 titulo.addEventListener('mouseenter', () => {
     titulo.style.textShadow = '0 0 15px #00c3ff';
 });
@@ -128,7 +99,3 @@ titulo.addEventListener('mouseenter', () => {
 titulo.addEventListener('mouseleave', () => {
     titulo.style.textShadow = 'none';
 });
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
